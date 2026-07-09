@@ -1,11 +1,25 @@
-function getComputerChoice(choice){
-		return choice
+// Function to get the computer to select 
+// either "rock", "paper", or "scissors at random"
+
+function getComputerChoice(){
+		const options = ["rock", "paper", "scissors"];
+		const random = Math.floor(Math.random() * options.length); 
+		return options[random];
 };
 
-let options = ["rock", "paper", "scissors"];
+const computerChoice = getComputerChoice();
 
-const random = Math.floor(Math.random() * options.length); 
+console.log(computerChoice);
 
-const message = getComputerChoice(options[random]);
+// Function to get user input of either 
+// "rock", "paper", or "scissors"
 
-console.log(message);
+function getHumanChoice(){
+		const selection = window.prompt("rock, paper, or scissors bitch?").toLowerCase();
+		return selection;
+};
+
+
+const humanChoice = getHumanChoice();
+
+console.log(humanChoice)
